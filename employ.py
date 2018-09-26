@@ -21,14 +21,22 @@ class Employee:
 	def set_raise_amt(cls, amount):
 		cls.raise_amt = amount
 
+
+	@classmethod
+	def from_string(cls, emp_str):
+		first, last, pay = emp_str.split('-')
+		return cls(first, last, pay)
+
+
 emp_1 = Employee('Corey', 'Schofar', 500000)
 emp_2 = Employee('Test', 'User', 600000)
 
 emp_str_1 = 'john-Deo-70000'
+emp_str_2 = 'steve-Smith-30000'
+emp_str_3 = 'jane-Doe-90000'
 
-first, last, pay = emp_str_1.split('-')
+new_emp_1 = Employee.from_string(emp_str_1)
 
-new_emp_1 = Employee(first, last, pay)
 
 print(new_emp_1.email)
 print(new_emp_1.pay)
