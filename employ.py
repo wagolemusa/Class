@@ -37,21 +37,30 @@ class Employee:
 		else:
 			print ("We will call you")
 
+#class developer and inheritance the Employee class
 class  Developer(Employee):
 	raise_amt = 1.10
-	
+	def __init__(self, first, last, pay, prog_lang):
+		super().__init__(first, last, pay)
 
-dev_1 = Developer('Corey', 'Schofar', 500000)
-dev_2 = Developer('Test', 'User', 600000)
+		self.prog_lang = prog_lang	
+
+dev_1 = Developer('Corey', 'Schofar', 500000, 'python')
+dev_2 = Developer('Test', 'User', 600000, 'java')
+
+
+
+print(dev_1.email)
+print(dev_1.prog_lang)
 
 
 # print(help(Developer))
 # print(dev_1.email)
 # print(dev_2.email)
 
-print(dev_1.pay)
-dev_1.apply_raise()
-print(dev_1.pay)
+# print(dev_1.pay)
+# dev_1.apply_raise()
+# print(dev_1.pay)
 
 
 
