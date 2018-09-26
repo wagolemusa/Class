@@ -74,6 +74,7 @@ mgr_1 = Maneger('Sue', 'Smith', 900000, [dev_1])
 
 print (mgr_1.email)
 
+mgr_1.add_emp(dev_2)
 mgr_1.print_emps()
 
 # print(dev_1.email)
