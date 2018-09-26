@@ -21,32 +21,31 @@ class Employee:
 	def set_raise_amt(cls, amount):
 		cls.raise_amt = amount
 
-
+	#classmethods to add new user 
 	@classmethod
 	def from_string(cls, emp_str):
 		first, last, pay = emp_str.split('-')
 		return cls(first, last, pay)
 
+	#static method to vaildate working days
+	@staticmethod
+	def is_workday(day):
+		if day.weekday() == 5:
+			print ("Its working day time for worker")
+		elif day.weekday() == 6:
+			print ("Its weekend")
+		else:
+			print ("We will call you")
 
 emp_1 = Employee('Corey', 'Schofar', 500000)
 emp_2 = Employee('Test', 'User', 600000)
 
-emp_str_1 = 'john-Deo-70000'
-emp_str_2 = 'steve-Smith-30000'
-emp_str_3 = 'jane-Doe-90000'
+import datetime
 
-new_emp_1 = Employee.from_string(emp_str_1)
+my_date = datetime.date(2018, 8, 25)
 
+print (Employee.is_workday(my_date))
 
-print(new_emp_1.email)
-print(new_emp_1.pay)
-
-# Employee.set_raise_amt(1.05)
-# print(Employee.raise_amt)
-# print(emp_1.raise_amt)
-# print(emp_2.raise_amt)
-
-print(Employee.num_of_emps)
 
 
 
