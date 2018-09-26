@@ -70,9 +70,12 @@ class Maneger(Employee):
 dev_1 = Developer('Corey', 'Schofar', 500000, 'python')
 dev_2 = Developer('Test', 'User', 600000, 'java')
 
-mgr_1 = Maneger('Sue', 'Smith', 900000)
+mgr_1 = Maneger('Sue', 'Smith', 900000, [dev_1])
 
 print (mgr_1.email)
+
+mgr_1.print_emps()
+
 # print(dev_1.email)
 # print(dev_1.prog_lang)
 
