@@ -3,22 +3,24 @@ class Employee:
 		self.first = first
 		self.last = last
 		self.pay = pay
-		self.email = first + '.' + last + '@company.com'
+
+	@property
+	def email(self):
+		return '{}.{}@mail.com'.format(self.first, self.last)
 
 		# method to dispaly fullname
+	@property
 	def fullname(self):
-		return  '{} {}'.format(self.first, self.last)
-          
+		return  '{} {}'.format(self.first, self.last, self.pay)
+  
 
-emp_1 = Employee('Corey', 'Schofar', 500000)
-emp_2 = Employee('Test', 'User', 600000)
+emp_1 = Employee('John', 'Smith', 50000)
 
-
+print(emp_1.first)
 print(emp_1.email)
-print(emp_2.email)
+print(emp_1.fullname)
+print(emp_1.pay)
 
-print(emp_1.fullname())
-print (emp_2.fullname())
 
 
 
