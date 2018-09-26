@@ -12,9 +12,16 @@ class Employee:
 	@property
 	def fullname(self):
 		return  '{} {}'.format(self.first, self.last, self.pay)
-  
+
+	@fullname.setter
+	def fullname(self, name):
+		first, last = name.split(' ')
+		self.first = first
+		self.last = last
 
 emp_1 = Employee('John', 'Smith', 50000)
+
+emp_1.fullname = 'refuge wise'
 
 print(emp_1.first)
 print(emp_1.email)
