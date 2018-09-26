@@ -37,15 +37,21 @@ class Employee:
 		else:
 			print ("We will call you")
 
-emp_1 = Employee('Corey', 'Schofar', 500000)
-emp_2 = Employee('Test', 'User', 600000)
+class  Developer(Employee):
+	raise_amt = 1.10
+	
 
-import datetime
+dev_1 = Developer('Corey', 'Schofar', 500000)
+dev_2 = Developer('Test', 'User', 600000)
 
-my_date = datetime.date(2018, 8, 25)
 
-print (Employee.is_workday(my_date))
+# print(help(Developer))
+# print(dev_1.email)
+# print(dev_2.email)
 
+print(dev_1.pay)
+dev_1.apply_raise()
+print(dev_1.pay)
 
 
 
