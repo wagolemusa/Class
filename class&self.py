@@ -18,9 +18,3 @@ will.perform_math_task(add, 40, 50)
 
 
 
-# will = Human("refuge", "wise")
-
-# print will.firstname
-# print will.lastname
-
-# will.speak_name()
