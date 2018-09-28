@@ -43,9 +43,13 @@ class Player(object):
 		self.hand.append(deck.drawCard())
 		return self
 
+	#show cards
 	def showHand(self):
 		for card in self.hand:
 			card.show()
+
+	def discard(self):
+		return self.hand.pop()
 
 # card = Card("club", 6)
 # card.show()
