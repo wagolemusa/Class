@@ -29,11 +29,18 @@ class Deck(object):
 			r = random.randint(0,i)
 			self.cards[i], self.cards[r] = self.cards[r], self.cards[i]
 
+	#this method drow a specific card randomly
+	def draw(self):
+		return self.cards.pop()
+
+
 
 # card = Card("club", 6)
-
 # card.show()
 
 me = Deck()
 me.shuffle()
-me.show()
+
+card = me.draw()
+card.show()
+#me.show()
