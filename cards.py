@@ -30,10 +30,22 @@ class Deck(object):
 			self.cards[i], self.cards[r] = self.cards[r], self.cards[i]
 
 	#this method drow a specific card randomly
-	def draw(self):
+	def drawCard(self):
 		return self.cards.pop()
 
+#class for aplayer
+class Player(object):
+	def __init__(self, name):
+		self.name = name
+		self.hand = []
 
+	def draw(self, deck):
+		self.hand.append(deck.drawCard())
+		return self
+
+	def showHand(self):
+		for card in self.hand:
+			card.show()
 
 # card = Card("club", 6)
 # card.show()
@@ -41,6 +53,10 @@ class Deck(object):
 me = Deck()
 me.shuffle()
 
-card = me.draw()
-card.show()
-#me.show()
+musa = Player("refuge")
+musa.draw(me).draw(me)
+musa.showHand()
+
+# card = me.drawCard()
+# card.show()
+# #me.show()
