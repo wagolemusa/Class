@@ -23,14 +23,17 @@ class Deck(object):
 		for c in self.cards:
 			c.show()
 		
+	# shuffle is in build method to display random cards	
 	def shuffle(self):
 		for i in range(len(self.cards)-1, 0, -1):
-			print i
+			r = random.randint(0,i)
+			self.cards[i], self.cards[r] = self.cards[r], self.cards[i]
+
 
 # card = Card("club", 6)
 
 # card.show()
 
 me = Deck()
-#me.show()
 me.shuffle()
+me.show()
