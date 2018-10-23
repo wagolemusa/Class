@@ -8,6 +8,7 @@ class Sequence(object):
           return True
     return False
 
+
   def isValid(self, f_num, s_num, others):
     if ((len(f_num) > 1 and f_num[0] == "0") or
     (len(s_num) > 1 and s_num[0] == "0")):
@@ -23,3 +24,4 @@ class Sequence(object):
 print Sequence().additive_number('66121830')
 print Sequence().additive_number('51123')
 print Sequence().additive_number('235813')
+print Sequence().additive_number('112')

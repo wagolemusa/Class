@@ -1,5 +1,5 @@
 class fibNumbers:
-
+                                 
   # function print fibonacil numbers
   def fibonaccil(self, number):
     num = [1,2]

@@ -1,0 +1,11 @@
+1. Create a class called BanckAccount.
+
+2. Create a constructor that takes in an integer and assigns this to a `balance` property.
+
+3. Create a method colled `depost` that takes in cash depost amount and  updates the balance accordingly
+
+4. Create a method  called `withdraw` that takes in cash  withdraw amount and updates the balance accordingly.
+
+If amount is greater than the balance return  "invalid transaction"
+
+5. Create a subclass  MinimuBalanceAccount of the BankAccount class.
